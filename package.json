@@ -4,6 +4,10 @@
   "description": "Resume chatbot",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "server": "nodemon app.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/dowinterfor6/envoy-bot/issues"
   },
-  "homepage": "https://github.com/dowinterfor6/envoy-bot#readme"
+  "homepage": "https://github.com/dowinterfor6/envoy-bot#readme",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.5"
+  }
 }
