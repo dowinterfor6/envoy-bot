@@ -25,6 +25,12 @@
         border: 1px solid black;
         border-radius: 3px;
         background-color: rgb(241, 241, 255);
+        max-width: 66%;
+
+        p {
+          margin: 0;
+          overflow-wrap: anywhere;
+        }
       }
 
       &.user {
