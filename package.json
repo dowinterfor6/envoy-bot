@@ -29,6 +29,7 @@
     "nodemon": "^2.0.5"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "botbuilder-adapter-web": "^1.0.9",
     "botkit": "^4.10.0",
     "botkit-plugin-cms": "^1.0.3",
