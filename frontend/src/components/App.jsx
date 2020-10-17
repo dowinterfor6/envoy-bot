@@ -3,8 +3,12 @@ import EnvoyBot from './EnvoyBot/EnvoyBot';
 
 function App() {
   return (
-    <div className="App">
-      This is app
+    <div className="app">
+      <header>
+        <h1>
+          Envoy Bot
+        </h1>
+      </header>
       <EnvoyBot />
     </div>
   );

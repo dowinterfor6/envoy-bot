@@ -1,0 +1,63 @@
+.envoy-bot-container {
+  margin: auto;
+  height: 500px;
+  width: 300px;
+  // border: 1px solid rgb(100, 100, 100);
+  display: grid;
+  // Height of header thing, main, input
+  grid-template-rows: 50px 400px 1fr;
+  overflow: hidden;
+
+  .message-list {
+    // TODO: Make scrollbar better lol
+    overflow-y: scroll;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 2px;
+
+      & > .message {
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: rgb(241, 241, 255);
+      }
+
+      &.user {
+        justify-content: flex-end;
+
+        & > .message {
+          border: 1px solid black;
+          border-radius: 3px;
+          background-color: rgb(240, 255, 240);
+        }
+      }
+    }
+  }
+
+  .input-container {
+    border: 1.5px solid rgb(93, 83, 138);
+    border-radius: 3px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    
+    input {
+      border: 0;
+      height: 100%;
+      padding-left: 5px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    button {
+      height: 100%;
+      border: 0;
+    }
+  }
+}
