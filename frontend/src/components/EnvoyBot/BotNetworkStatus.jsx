@@ -3,7 +3,7 @@ import React from 'react';
 const BotNetworkStatus = () => {
   return (
     <div className="envoy-bot-network-status">
-      this is BotNetworkStatus
+      You're online dumbass
       {/* <div className="disconnected">
         Disconnected... reconnecting!
       </div>
