@@ -1,0 +1,19 @@
+{
+  "name": "envoy-bot",
+  "version": "1.0.0",
+  "description": "Resume chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dowinterfor6/envoy-bot.git"
+  },
+  "author": "dowinterfor6",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dowinterfor6/envoy-bot/issues"
+  },
+  "homepage": "https://github.com/dowinterfor6/envoy-bot#readme"
+}
