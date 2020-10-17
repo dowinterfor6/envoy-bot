@@ -2,6 +2,9 @@
   "name": "envoy-bot",
   "version": "1.0.0",
   "description": "Resume chatbot",
+  "engines": {
+    "node": "13.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
