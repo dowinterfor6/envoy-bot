@@ -24,6 +24,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 app.use(bodyParser.json());
 
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log(`Server started on port ${port}`);
+});
+
 let botkitConfig = {
   webhook_uri: '/api/messages',
   adapter: adapter,
@@ -39,11 +44,6 @@ const controller = new Botkit(botkitConfig);
 //     token: process.env.CMS_TOKEN,
 //   }));
 // }
-
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
-});
 
 controller.webserver = app;
 
