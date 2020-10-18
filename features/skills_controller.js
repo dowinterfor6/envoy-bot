@@ -2,7 +2,34 @@ const { skills } = require('../resume/resume.json');
 
 module.exports = (controller) => {
   // TODO: Use regex for more robust
-  controller.hears(async (message) => message.text && message.text.toLowerCase() === 'skills', ['message'], async (bot, message) => {
-    await bot.reply(message, JSON.stringify(skills));
+  controller.hears(new RegExp(/.*(skill).*/i), ['message','direct_message'], async function(bot, message) {
+    if (skills.length > 0) {
+      let skillMessage = skills.length === 1 ? 
+      "I have the following skill:"
+      :
+      "I have the following skills:"
+
+      // TODO: this wording feels terrible
+      await bot.reply(message, skillMessage);
+      skills.forEach(async ({ name, level, keywords }) => {
+        const keywordsList = keywords.map((word, idx) => {
+          switch (idx) {
+            case 0:
+              return word;
+            case keywords.length - 1:
+              return `, and ${word}`;
+            default:
+              return `, ${word}`;
+          }
+        })
+        const reply = `
+          ${name} - ${level}, in ${keywordsList.join("")}
+        `
+        await bot.reply(message, reply);
+      })
+      // TODO: Add follow up for specifics?
+    } else {
+      await bot.reply(message, "I currently do not have any skills");
+    }
   });
 }
