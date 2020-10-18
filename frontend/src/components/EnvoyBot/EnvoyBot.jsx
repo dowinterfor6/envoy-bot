@@ -55,6 +55,7 @@ const EnvoyBot = () => {
           })}
         </ul>
         <form onSubmit={handleSubmit} className="input-container">
+          {/* TODO: Handle overflow */}
           <input type="text" placeholder="Ask me something..." onChange={(e) => setTextInput(e.currentTarget.value)} value={textInput}/>
           <button type="submit">Send</button>
         </form>
