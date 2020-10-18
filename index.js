@@ -8,27 +8,15 @@ const { WebAdapter } = require('botbuilder-adapter-web');
 // Load process.env values from .env file
 require('dotenv').config();
 
-const adapter = new WebAdapter({});
 
 const express = require("express");
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 
+const adapter = new WebAdapter();
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('frontend/build'));
-  app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  })
-}
-app.use(bodyParser.json());
-
-// const port = process.env.PORT || 5000;
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server started on port ${port}`);
-});
+adapter.createSocketServer(app, {});
 
 let botkitConfig = {
   webhook_uri: '/api/messages',
@@ -38,6 +26,13 @@ let botkitConfig = {
 
 const controller = new Botkit(botkitConfig);
 
+controller.webserver.use(express.static('frontend/build'));
+controller.webserver.use(bodyParser.json());
+controller.webserver.get('/', (req, res) => {
+  console.log("error?");
+  res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+});
+
 // TODO: Currently not being used
 // if (process.env.CMS_URI) {
 //   controller.usePlugin(new BotkitCMSHelper({
@@ -45,8 +40,6 @@ const controller = new Botkit(botkitConfig);
 //     token: process.env.CMS_TOKEN,
 //   }));
 // }
-
-controller.webserver = app;
 
 // Once the bot has booted up its internal services, you can use them to do stuff.
 controller.ready(() => {
