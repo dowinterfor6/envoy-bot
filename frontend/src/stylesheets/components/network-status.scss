@@ -1,0 +1,31 @@
+.header-bar {
+  // border: 1px solid black;
+  height: 50px;
+  position: relative;
+
+  h1 {
+    margin: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .envoy-bot-network-status {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid red;
+    top: 50px;
+    border-radius: 3px;
+    background: white;
+    display: none;
+
+    // TODO: Figure this shit out
+    &.fade-out {
+      transition-delay: 2s;
+      transition: all 1.5s;
+    }
+  }
+}
