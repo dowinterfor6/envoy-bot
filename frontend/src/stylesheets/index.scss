@@ -1,5 +1,21 @@
+@import "./reset/reset.scss";
+@import "./variables/variables.scss";
+@import "./global/button.scss";
+
 @import "./components/app.scss";
 @import "./components/envoy-bot.scss";
+@import "./components/landing.scss";
+@import "./components/network-status.scss";
+
+body {
+  height: 100vh;
+  // TODO: width: 100vh might break on mobile
+}
+
+main {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 * {
   box-sizing: border-box;

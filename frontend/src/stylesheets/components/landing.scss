@@ -1,0 +1,70 @@
+$desktopContainerWidth: 700px;
+
+.landing {
+  height: 100%;
+
+  .nav-links {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    .additional-buttons {
+      a {
+        height: 36px;
+        width: 36px;
+        margin: 10px;
+        cursor: pointer;
+
+        .fa-lg {
+          font-size: 36px;
+        }
+
+        &:hover {
+          color: rgb(71, 71, 71);
+        }
+      }
+    }
+  }
+
+  .landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .landing-text-container {
+      // TODO: Mobile?
+      // height: $goldenRatio * 400px;
+      // width: 400px;
+      height: 700px;
+      width: $desktopContainerWidth;
+      color: $primaryColor;
+  
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  
+      > *:not(:last-child) {
+        margin-bottom: 10px;
+      }
+  
+      .landing-header {
+        font-size: 56px;
+
+        em {
+          color: $tertiaryColor;
+        }
+      }
+  
+      .landing-sub-header {
+        font-size: 24px;
+      }
+  
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
