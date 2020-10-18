@@ -8,9 +8,9 @@ const Landing = ({ onEnvoyBotClick }) => {
     <section className="landing">
       <header className="nav-links">
         <div className="additional-buttons">
-          <a><FontAwesomeIcon icon={faFileAlt} size="lg"/></a>
-          <a><FontAwesomeIcon icon={faGithubSquare} size="lg"/></a>
-          <a><FontAwesomeIcon icon={faLinkedin} size="lg"/></a>
+          <a href="https://achan.dev/resume/Andrew_Chan_Resume.pdf" target="_blank"><FontAwesomeIcon icon={faFileAlt} size="lg"/></a>
+          <a href="https://github.com/dowinterfor6" target="_blank"><FontAwesomeIcon icon={faGithubSquare} size="lg"/></a>
+          <a href="https://linkedin.com/in/a-z-chan" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="lg"/></a>
         </div>
       </header>
       <section className="landing-container">
