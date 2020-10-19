@@ -14,7 +14,7 @@ module.exports = (controller) => {
       })
       // TODO: Add follow up for specifics?
     } else {
-      await bot.reply(message, "I currently do not have any volunteer experience");
+      await bot.reply(message, "I currently do not have any recent volunteer experience");
     }
   });
 }

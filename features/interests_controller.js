@@ -7,11 +7,12 @@ module.exports = (controller) => {
       await bot.reply(message, "I have the following interests:");
       interests.forEach(async ({ name, keywords }) => {
         const keywordsList = keywords.map((word, idx) => {
+          // TODO: Refactor with skills?
           switch (idx) {
             case 0:
               return word;
             case keywords.length - 1:
-              return `, and ${word}`;
+              return ` and ${word}`;
             default:
               return `, ${word}`;
           }
