@@ -1,7 +1,14 @@
 $desktopContainerWidth: 700px;
 
 .landing {
+  opacity: 0;
+  transition-delay: 1s;
+  transition: ease-in-out all 0.5s;
   height: 100%;
+
+  &.show {
+    opacity: 1;
+  }
 
   .nav-links {
     width: 100%;

@@ -3,6 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transition-delay: 1s;
+  transition: ease-in-out all 0.5s;
+
+  &.show {
+    opacity: 1;
+  }
 
   .envoy-bot-container {
     margin: auto;
