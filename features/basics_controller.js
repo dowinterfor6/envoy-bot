@@ -17,17 +17,16 @@ module.exports = (controller) => {
     // TODO: add prompt for sending an e-mail message
   });
 
-  // TODO: website || portfolio
   controller.hears(new RegExp(/.*(website|social|portfolio).*/i), ['message','direct_message'], async function(bot, message) {
     // TODO: add preferred
     await bot.reply(message, `My personal website is at ${basics.website}`);
     const socialMedia = basics.profiles;
     console.log(socialMedia);
     if (socialMedia.length > 0) {
-      await bot.reply(message, "I am active on the following social media:");
       // TODO: reply with link?
       socialMedia.forEach(async ({ network, username, url }) => {
-        await bot.reply(message, `\n${network}: ${url} ${username ? `(as ${username})` : ''}`);
+        // TODO: Replace "you can also find me" repetition for future use
+        await bot.reply(message, `You can also find me on ${network}: ${url} ${username ? `(as ${username})` : ''}`);
       });
     }
   });

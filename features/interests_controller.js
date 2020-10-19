@@ -2,10 +2,9 @@ const { interests } = require('../resume/resume.json');
 
 module.exports = (controller) => {
   // TODO: Use regex for more robust
-  controller.hears(new RegExp(/.*(interest|hobby).*/i), ['message','direct_message'], async function(bot, message) {
+  controller.hears(new RegExp(/.*(interest|hobby|hobbies|free time).*/i), ['message','direct_message'], async function(bot, message) {
     if (interests.length > 0) {
-      await bot.reply(message, "I have the following interests:");
-      interests.forEach(async ({ name, keywords }) => {
+      interests.forEach(async ({ name, keywords }, idx) => {
         const keywordsList = keywords.map((word, idx) => {
           // TODO: Refactor with skills?
           switch (idx) {
@@ -18,9 +17,10 @@ module.exports = (controller) => {
           }
         })
         const reply = `
-          ${name}, such as ${keywordsList.join("")}
+          ${name.toLowerCase()}, such as ${keywordsList.join("")}
         `
-        await bot.reply(message, reply);
+        const also = idx === 0 ? '' : 'also';
+        await bot.reply(message, `I'm ${also} interested in ${reply}`);
       })
       // TODO: Add follow up for specifics?
     } else {

@@ -8,13 +8,13 @@ module.exports = (controller) => {
       volunteer.forEach(async ({ organization, position, startDate, endDate }) => {
         // TODO: Alter "I held" at random?
         const reply = `
-          I held the position of ${position} at ${organization} from ${startDate} to ${endDate}
+          I volunteered as a ${position} at ${organization} from ${startDate} to ${endDate}
         `
         await bot.reply(message, reply);
       })
       // TODO: Add follow up for specifics?
     } else {
-      await bot.reply(message, "I currently do not have any recent volunteer experience");
+      await bot.reply(message, "I currently do not have any recent or relevant volunteer experience");
     }
   });
 }

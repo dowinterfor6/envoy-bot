@@ -6,7 +6,7 @@
     "email": "dowinterfor6@gmail.com",
     "phone": "",
     "website": "https://achan.dev",
-    "summary": "I'm from Hong Kong, current based in San Francisco. I have a passion for building websites and quirky side-projects",
+    "summary": "I'm from Hong Kong, and currently based in San Francisco. I have a passion for building websites and quirky side-projects",
     "location": {
       "address": "",
       "postalCode": "94536",
@@ -53,14 +53,14 @@
     {
       "institution": "University of Washington, Seattle",
       "area": "Applied Physics",
-      "studyType": "Bachelor",
+      "studyType": "Bachelor's degree",
       "startDate": "Fall 2014",
       "endDate": "Winter 2018"
     },
     {
       "institution": "App Academy",
       "area": "Full Stack Software Engineering",
-      "studyType": "Bootcamp",
+      "studyType": "",
       "startDate": "Spring 2019",
       "endDate": "Summer 2019"
     }
