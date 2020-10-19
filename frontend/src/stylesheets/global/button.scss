@@ -1,15 +1,18 @@
 button {
-  border: 0.5px solid black;
+  border: 1px solid $primaryColor;
+  color: $primaryColor;
   background-color: transparent;
   height: 50px;
   font-size: 18px;
   text-transform: uppercase;
   cursor: pointer;
+  padding: 10px 15px;
 
   &:hover {
-    background-color: rgb(245, 245, 245);
-    border-color: rgb(10, 10, 10);
-    transition: all 0.5s;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: $secondaryColor;
+    transition: all 1s;
   }
 
   &:focus {

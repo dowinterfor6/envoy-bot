@@ -1,3 +1,5 @@
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import { postMessage } from '../../utils/bot_utils';
@@ -59,7 +61,9 @@ const EnvoyBot = () => {
         <form onSubmit={handleSubmit} className="input-container">
           {/* TODO: Handle overflow */}
           <input type="text" placeholder="Ask me something..." onChange={(e) => setTextInput(e.currentTarget.value)} value={textInput}/>
-          <button type="submit">Send</button>
+          <button type="submit" className="send-message-button">
+            <FontAwesomeIcon icon={faChevronRight} size="lg"/>
+          </button>
         </form>
       </div>
     </section>

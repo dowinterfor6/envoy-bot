@@ -1,10 +1,13 @@
 .header-bar {
   // border: 1px solid black;
-  height: 50px;
+  height: 75px;
   position: relative;
+  background-color: white;
+  box-shadow: 0 0px 3px 0px black;
+  display: flex;
 
   h1 {
-    margin: 10px;
+    margin: auto;
     font-size: 24px;
     text-align: center;
   }
