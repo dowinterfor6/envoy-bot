@@ -5,13 +5,13 @@ module.exports = (controller) => {
   // TODO: regex for each company?
   controller.hears(new RegExp(/.*(work|job).*/i), ['message','direct_message'], async function(bot, message) {
     if (work.length > 0) {
-      await bot.reply(message, "I have the following work experience:");
-      work.forEach(async ({ company, position, startDate, endDate, summary }) => {
+      work.forEach(async ({ company, position, startDate, endDate, summary }, idx) => {
         // TODO: Alter "I held" at random?
         // TODO: Wording/layout is clunky
+        const also = idx === 0 ? "" : "also";
         const reply = `
-          I held the position of ${position} at ${company} from ${startDate} to ${endDate}.
-          \nA quick summary:${summary}
+          I ${also} held the position of ${position} at ${company} from ${startDate} to ${endDate}.
+          \nA quick summary: ${summary}
         `
         await bot.reply(message, reply);
       })
