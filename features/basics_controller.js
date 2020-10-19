@@ -8,8 +8,12 @@ module.exports = (controller) => {
   });
 
   controller.hears(new RegExp(/.*contact.*/i), ['message','direct_message'], async function(bot, message) {
-    // TODO: add preferred
-    await bot.reply(message, `You can contact me via e-mail at ${basics.email} or via phone at ${basics.phone}`);
+    const reply = `
+      You can contact me via e-mail at ${basics.email}
+      ${basics.phone ? ` or via phone at ${basics.phone}`: ''}
+    `;
+
+    await bot.reply(message, reply);
     // TODO: add prompt for sending an e-mail message
   });
 
@@ -31,7 +35,7 @@ module.exports = (controller) => {
   // TODO: where are you?
   controller.hears(new RegExp(/.*locat.*/i), ['message','direct_message'], async function(bot, message) {
     // TODO: preferences?
-    const { city, region, countryCode } = basics.location;
-    await bot.reply(message, `I am currently based in ${city}, ${region}, ${countryCode}`);
+    const { city, region, countryCode, postalCode } = basics.location;
+    await bot.reply(message, `I am currently based in ${city}, ${region} ${postalCode}, ${countryCode}`);
   });
 }

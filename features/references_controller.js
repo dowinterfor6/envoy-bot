@@ -17,6 +17,7 @@ module.exports = (controller) => {
       // TODO: Add follow up for specifics?
     } else {
       await bot.reply(message, "I currently do not have any references");
+      // TODO: Send e-mail to request reference
     }
   });
 }

@@ -18,7 +18,17 @@ const EnvoyBot = () => {
 
   useEffect(() => {
     envoyBotWrapper.current.classList.toggle("show");
-  });
+    envoyBotWrapper.current.addEventListener("transitionend", async () => {
+      const payload = {
+        type: "greeting",
+        text: "greeting",
+        channel: "websocket",
+        user: currUser
+      }
+      const { data } = await postMessage(payload);
+      setMessages([...data]);
+    });
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

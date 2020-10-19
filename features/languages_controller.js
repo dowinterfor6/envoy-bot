@@ -8,12 +8,12 @@ module.exports = (controller) => {
       "I speak the following language:"
       :
       "I speak the following languages:"
-
+      
+      // TODO: instead of I speak, make it sound more conversational
       await bot.reply(message, languageMessage);
       languages.forEach(async ({ language, fluency }) => {
         await bot.reply(message, `${language} - ${fluency}`);
       })
-      // TODO: Add follow up for specifics?
     } else {
       await bot.reply(message, "I currently do not know any languages");
     }

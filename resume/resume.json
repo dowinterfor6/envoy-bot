@@ -1,93 +1,120 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
+    "name": "Andrew Chan",
+    "label": "Software Engineer",
     "picture": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "website": "http://johndoe.com",
-    "summary": "A summary of John Doe...",
+    "email": "dowinterfor6@gmail.com",
+    "phone": "",
+    "website": "https://achan.dev",
+    "summary": "I'm from Hong Kong, current based in San Francisco. I have a passion for building websites and quirky side-projects",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
+      "address": "",
+      "postalCode": "94536",
       "city": "San Francisco",
       "countryCode": "US",
       "region": "California"
     },
     "profiles": [{
-      "network": "Twitter",
-      "username": "john",
-      "url": "http://twitter.com/john"
+      "network": "LinkedIn",
+      "username": "Andrew Chan",
+      "url": "https://linkedin.com/in/a-z-chan"
     }]
   },
-  "work": [{
-    "company": "Company",
-    "position": "President",
-    "website": "http://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description...",
-    "highlights": [
-      "Started the company"
-    ]
-  }],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "website": "http://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description...",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
-  "education": [{
-    "institution": "University",
-    "area": "Software Development",
-    "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "gpa": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
+  "work": [
+    {
+      "company": "Nisum",
+      "position": "Software Engineer",
+      "website": "https://nisum.com",
+      "startDate": "2020-01-06",
+      "endDate": "present",
+      "summary": "Software Engineer working with Nisum, a global business and technology consulting firm with numerous major clients.",
+      "highlights": [
+        "Created proof of concepts for client B2B site",
+        "Increased global Jest test coverage to over 90% for all projects",
+        "Facilitated a client's transition from SVN/FTL to MFE with Git/Vue"
+      ]
+    },
+    {
+      "company": "App Academy",
+      "position": "Software Engineer Technical Admissions Specialist",
+      "website": "https://appacademy.io",
+      "startDate": "2020-08-06",
+      "endDate": "2020-12-31",
+      "summary": "Technical admissions specialist, conducting both technical and non-technical interviews for App Academy Bootcamp applicants",
+      "highlights": [
+        "Conducted technical interviews in JavaScript, Python, and Ruby to assess candidate skills",
+        "Mentored over a dozen peers during their onboarding",
+        "Provided feedback and discussion for improving interview quality"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "University of Washington, Seattle",
+      "area": "Applied Physics",
+      "studyType": "Bachelor",
+      "startDate": "Fall 2014",
+      "endDate": "Winter 2018"
+    },
+    {
+      "institution": "App Academy",
+      "area": "Full Stack Software Engineering",
+      "studyType": "Bootcamp",
+      "startDate": "Spring 2019",
+      "endDate": "Summer 2019"
+    }
+  ],
   "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
+    "title": "Nisum US Virtual Hackathon",
+    "date": "2020-07-31",
+    "awarder": "Nisum",
+    "summary": "First Nisum Virtual Hackathon with the theme of 'Entering the new normal'"
   }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "website": "http://publication.com",
-    "summary": "Description..."
-  }],
+  "publications": [],
   "skills": [{
-    "name": "Web Development",
-    "level": "Master",
+    "name": "Software Engineering",
+    "level": "",
     "keywords": [
-      "HTML",
-      "CSS",
-      "Javascript"
+      "JavaScript",
+      "TypeScript",
+      "Node",
+      "Ruby",
+      "Python",
+      "React",
+      "Vue",
+      "Express"
     ]
   }],
-  "languages": [{
-    "language": "English",
-    "fluency": "Native speaker"
-  }],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference..."
-  }]
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Cantonese",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "Mandarin",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Sports",
+      "keywords": [
+        "Basketball",
+        "Badminton"
+      ]
+    },
+    {
+      "name": "Game development",
+      "keywords": [
+        "Unreal",
+        "Unity"
+      ]
+    }
+  ],
+  "references": []
 }
