@@ -15,16 +15,18 @@ const EnvoyBot = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const payload = {
-      type: "message",
-      text: textInput,
-      channel: "websocket",
-      user: currUser
+    if (textInput) {
+      const payload = {
+        type: "message",
+        text: textInput,
+        channel: "websocket",
+        user: currUser
+      }
+      // TODO: Useful for if there's a significant difference between message sent and response?
+      setMessages([...messages, payload]);
+      sendMessage(payload);
+      setTextInput("");
     }
-    // TODO: Useful for if there's a significant difference between message sent and response?
-    setMessages([...messages, payload]);
-    sendMessage(payload);
-    setTextInput("");
   };
 
   const sendMessage = async (payload) => {
