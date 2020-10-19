@@ -10,10 +10,15 @@ const EnvoyBot = () => {
   const [textInput, setTextInput] = useState("");
   const [messages, setMessages] = useState([]);
   const messageListRef = useRef(null);
+  const envoyBotWrapper = useRef(null);
 
   useEffect(() => {
     messageListRef.current.scrollTop = messageListRef.current.scrollHeight - messageListRef.current.clientHeight;
   }, [messages]);
+
+  useEffect(() => {
+    envoyBotWrapper.current.classList.toggle("show");
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +46,7 @@ const EnvoyBot = () => {
   }
 
   return (
-    <section className="envoy-bot">
+    <section className="envoy-bot" ref={envoyBotWrapper}>
       <div className="envoy-bot-container">
         {/* TODO: Make this into a generic header */}
         <HeaderBar />

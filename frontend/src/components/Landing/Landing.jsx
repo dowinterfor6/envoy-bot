@@ -2,10 +2,26 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const Landing = ({ onEnvoyBotClick }) => {
+  const landingContainer = useRef(null);
+
+  const prepareUnmount = () => {
+    landingContainer.current.classList.toggle("show");
+    // TODO: If user clicks too fast listener will listen to first transitionend instead of the second
+    landingContainer.current.addEventListener("transitionend", () => {
+      onEnvoyBotClick();
+    })
+  };
+
+  useEffect(() => {
+    landingContainer.current.classList.toggle("show");
+  });
+
   return (
-    <section className="landing">
+    <section className="landing" ref={landingContainer}>
       <header className="nav-links">
         <div className="additional-buttons">
           <a
@@ -41,7 +57,7 @@ const Landing = ({ onEnvoyBotClick }) => {
           </h2>
           <div className="button-container">
             <div className="call-to-action">
-              <button onClick={onEnvoyBotClick}>Talk to my Envoy</button>
+              <button onClick={prepareUnmount}>Talk to my Envoy</button>
             </div>
           </div>
         </div>
