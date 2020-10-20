@@ -3,9 +3,13 @@
 @import "./global/button.scss";
 
 @import "./components/app.scss";
+@import "./components/navbar.scss";
 @import "./components/envoy-bot.scss";
+@import "./components/sidebar.scss";
+@import "./components/details-display.scss";
+@import "./components/chat-bot.scss";
 @import "./components/landing.scss";
-@import "./components/network-status.scss";
+@import "./components/header-bar.scss";
 
 body {
   height: 100vh;

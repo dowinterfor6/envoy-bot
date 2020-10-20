@@ -1,0 +1,38 @@
+.nav-links {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 20px;
+  font-size: 20px;
+  color: $primaryColor;
+
+  &-left {
+    cursor: default;
+  }
+
+  &-right {
+    ul {
+      display: flex;
+      li {
+        a {
+          padding: 5px;
+          text-decoration: none;
+          color: $primaryColor;
+          transition: ease-in-out all 0.5s;
+          // TODO: Slight overlap border bothers me a little
+          border-left: 1px solid transparent;
+          border-right: 1px solid transparent;
+
+          &:hover {
+            border-left: 1px solid $primaryColor;
+            border-right: 1px solid $primaryColor;
+            color: rgb(100, 100, 100);
+          }
+        }
+      }
+    }
+  }
+}

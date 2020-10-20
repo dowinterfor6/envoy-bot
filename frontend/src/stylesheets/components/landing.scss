@@ -10,32 +10,6 @@ $desktopContainerWidth: 700px;
     opacity: 1;
   }
 
-  .nav-links {
-    width: 100%;
-    position: absolute;
-    top: 10px;
-    display: flex;
-    justify-content: flex-end;
-
-    .additional-buttons {
-      a {
-        height: 36px;
-        width: 36px;
-        margin: 10px;
-        color: $primaryColor;
-        cursor: pointer;
-
-        .fa-lg {
-          font-size: 36px;
-        }
-
-        &:hover {
-          color: rgb(71, 71, 71);
-        }
-      }
-    }
-  }
-
   .landing-container {
     height: 100%;
     display: flex;
@@ -73,7 +47,7 @@ $desktopContainerWidth: 700px;
       .button-container {
         display: flex;
         justify-content: space-between;
-        margin-top: 5px;
+        margin-top: 15px;
       }
     }
   }

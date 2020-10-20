@@ -1,0 +1,40 @@
+.side-bar {
+  background-color: $quaternaryChatColor;
+
+  &-icons-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10px;
+
+    li {
+      height: 55px;
+      width: 55px;
+      // border-radius: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      color: $primaryColor;
+
+      &:hover {
+        transition: all 0.5s;
+        // background-color: $primaryColor;
+        color: $tertiaryColor;
+      }
+
+      &.active {
+        color: $tertiaryColor;
+      }
+
+      a {
+        &:visited {
+          color: inherit;
+        }
+      }
+
+    }
+  }
+}

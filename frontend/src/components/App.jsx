@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import EnvoyBot from './EnvoyBot/EnvoyBot';
 import Landing from './Landing/Landing';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
-  const [isLandingPage, setIsLandingPage] = useState(true);
-  // TODO: temp, or don't be lazy and actually use routes
-  // const [isLandingPage, setIsLandingPage] = useState(false);
-
-  const navigateToEnvoyBot = () => {
-    setIsLandingPage(false);
-  }
-
-  const envoyBotComponent = isLandingPage ? null : <EnvoyBot />;
-  const landingComponent = isLandingPage ? <Landing onEnvoyBotClick={navigateToEnvoyBot}/> : null;
-
   return (
     <div className="app">
-      {envoyBotComponent}
-      {landingComponent}
+      <BrowserRouter>
+        <Switch>
+          <Route path="/envoy-bot" component={EnvoyBot} />
+          <Route path="/" component={Landing} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
