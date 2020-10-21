@@ -1,0 +1,91 @@
+.card-container {
+  border-bottom: 1px solid $borderColor;
+  padding: 10px;
+  height: 150px;
+  // display: flex;
+  // flex-direction: column;
+
+  &.help {
+    height: 225px;
+  }
+
+  &.skills {
+    height: auto;
+    
+    .skill-list {
+      padding: 5px 0;
+      cursor: pointer;
+      font-size: 22px;
+
+      .projects {
+        max-height: 0;
+        overflow: hidden;
+        transition: ease-out all 0.25s;
+        font-size: 16px;
+
+        li {
+          padding: 5px 5px 0 5px;
+          margin-bottom: 0;
+
+          a {
+            text-decoration: none;
+            color: $primaryColor;
+            cursor: pointer;
+        
+            &:hover {
+              transition: all 0.5s;
+              // background-color: $primaryColor;
+              color: $tertiaryColor;
+            }
+          }
+        }
+      }
+      
+      &:hover {
+        .projects {
+          max-height: 100px;
+          transition: ease-in all 0.5s;
+        }
+      }
+    }
+  }
+
+  .card-header-link {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: $primaryColor;
+
+    a {
+      text-decoration: none;
+      color: $primaryColor;
+      cursor: pointer;
+  
+      &:hover {
+        transition: all 0.5s;
+        // background-color: $primaryColor;
+        color: $tertiaryColor;
+      }
+    }
+  }
+
+  .card-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card-list {
+    font-size: 16px;
+    margin-bottom: 10px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .card-keywords {
+    font-size: 12px;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  }
+}

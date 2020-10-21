@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Card from './Card';
 
-const DetailsDisplay = ({ activeTab }) => {
+const DetailsDisplay = ({ activeTab, details }) => {
+  const detailsContentRef = useRef();
   /* 
     Summary Format:
     Cat title
@@ -13,10 +15,15 @@ const DetailsDisplay = ({ activeTab }) => {
     Tip title
     Tips
   */
+  useEffect(() => {
+    // TODO: this is hardcoded refactor pls
+    detailsContentRef.current.style.maxHeight = `${document.body.clientHeight - 75}px`;
+  }, []);
 
   const helpContent = [
     {
       title: "What can Envoy Bot do?",
+      type: "help",
       res: [
         "Respond to basic questions about Andrew in his place (as if I am Andrew)",
         "Provide a concise answer in chat, and a detailed answer (if applicable) in the bookmarks tab",
@@ -25,17 +32,42 @@ const DetailsDisplay = ({ activeTab }) => {
     },
     {
       title: "How does Envoy Bot work?",
+      type: "help",
       res: [
         "I listen to specific key words and try my best to provide an appropriate response",
       ]
     }
   ]
 
+  const noDetails = (
+    <li className="no-details">
+      Looks like you haven't asked anything that has additional details... 
+      Try asking about projects or skills!
+    </li>
+  )
+
   let contentToDisplay;
   if (activeTab === "help") {
-    contentToDisplay = helpContent;
+    contentToDisplay = helpContent.map(({ title, res, type }, idx) => {
+      return (
+        <li className="parent-box card" key={`help-${idx}`}>
+          <Card payload={{ title, res }} type={type} />
+        </li>
+      )
+    });
   } else {
-    contentToDisplay = [];
+    if (details.length !== 0) {
+      contentToDisplay = details.map(({ payload, type }, idx) => {
+        return (
+          // Map for skills?
+          <li className="parent-box card" key={`details-${idx}`}>
+            <Card payload={payload} type={type} />
+          </li>
+        )
+      })
+    } else {
+      contentToDisplay = noDetails;
+    }
   };
 
   return (
@@ -45,28 +77,9 @@ const DetailsDisplay = ({ activeTab }) => {
           {activeTab}
         </h1>
       </div>
-      <div className="details-display-content">
+      <div className="details-display-content" ref={detailsContentRef}>
         <ul className="content-list">
-          {contentToDisplay.map(({ title, res, startDate, endDate }, idx) => {
-            if (activeTab === "help") {
-              return (
-                <li className="parent-box" key={`${title}-${idx}`}>
-                  <h3>
-                    {title}
-                  </h3>
-                  <ul>
-                    {res.map((data, idx2) => (
-                      <li key={`${idx}-${idx2}`}>
-                        {data}
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              )
-            } else {
-
-            }
-          })}
+          {contentToDisplay}
         </ul>
       </div>
     </section>

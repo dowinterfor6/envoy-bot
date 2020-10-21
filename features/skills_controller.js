@@ -1,4 +1,4 @@
-const { skills } = require('../resume/resume.json');
+const { skills, projects } = require('../resume/resume.json');
 
 module.exports = (controller) => {
   // TODO: Use regex for more robust
@@ -26,7 +26,16 @@ module.exports = (controller) => {
           ${skillMessage} ${name}: ${keywordsList.join("")}
         `
         await bot.reply(message, reply);
-      })
+      });
+
+      const payloadRes = {
+        type: "skills",
+        payload: { 
+          skills,
+          projects
+        }
+      }
+      await bot.reply(message, payloadRes);
       // TODO: Add follow up for specifics?
     } else {
       await bot.reply(message, "I currently do not have any skills");
