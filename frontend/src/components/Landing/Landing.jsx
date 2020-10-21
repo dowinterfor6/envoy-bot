@@ -22,6 +22,10 @@ const Landing = () => {
           <h2 className="landing-sub-header">
             Software Engineer based in San Francisco
           </h2>
+          <h3 className="landing-description">
+            While I may not be available to answer your questions immediately,
+            you can try talking to my envoy, Envoy Bot!
+          </h3>
           <div className="button-container">
             <div className="call-to-action">
               <Link className="button" to="/envoy-bot">Talk to my envoy</Link>
