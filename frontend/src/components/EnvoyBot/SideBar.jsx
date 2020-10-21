@@ -1,4 +1,4 @@
-import { faArrowLeft, faBookmark, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -36,7 +36,7 @@ const SideBar = ({ setActiveTab }) => {
           className={activeState.details ? "active" : ""}
           onClick={handleTabSelection}
         >
-          <FontAwesomeIcon icon={faBookmark} size="lg"/>
+          <FontAwesomeIcon icon={faInfo} size="lg"/>
         </li>
         <li 
           id="help"

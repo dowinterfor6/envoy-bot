@@ -21,7 +21,6 @@ module.exports = (controller) => {
     // TODO: add preferred
     await bot.reply(message, `My personal website is at ${basics.website}`);
     const socialMedia = basics.profiles;
-    console.log(socialMedia);
     if (socialMedia.length > 0) {
       // TODO: reply with link?
       socialMedia.forEach(async ({ network, username, url }) => {
