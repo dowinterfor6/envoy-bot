@@ -76,14 +76,18 @@
     "name": "Software Engineering",
     "level": "",
     "keywords": [
-      "JavaScript",
-      "TypeScript",
-      "Node",
-      "Ruby",
-      "Python",
       "React",
-      "Vue",
-      "Express"
+      "Redux",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "AJAX",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "Node",
+      "Unity",
+      "C#",
+      "Firebase"
     ]
   }],
   "languages": [
@@ -116,5 +120,45 @@
       ]
     }
   ],
-  "references": []
+  "references": [],
+  "projects": [
+    {
+      "title": "Go-chella",
+      "summary": "An event planning and organizing website",
+      "url": "https://go-chella.herokuapp.com/#/",
+      "screenshot": "",
+      "keywords": [
+        "JavaScript",
+        "MongoDB",
+        "Express",
+        "React",
+        "Redux",
+        "Node"
+      ]
+    },
+    {
+      "title": "Flappybara",
+      "summary": "A casual game for all ages",
+      "url": "https://play.google.com/store/apps/details?id=com.dowinterfor6.flappybara",
+      "screenshot": "",
+      "keywords": [
+        "Unity",
+        "C#",
+        "Firebase"
+      ]
+    },
+    {
+      "title": "Discourse",
+      "summary": "An app for live text chat",
+      "url": "https://discord-clone.herokuapp.com/#/",
+      "screenshot": "",
+      "keywords": [
+        "React",
+        "Redux",
+        "Ruby on Rails",
+        "PostgreSQL",
+        "AJAX"
+      ]
+    }
+  ]
 }
