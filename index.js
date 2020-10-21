@@ -28,7 +28,7 @@ const controller = new Botkit(botkitConfig);
 
 controller.webserver.use(express.static('frontend/build'));
 controller.webserver.use(bodyParser.json());
-controller.webserver.get('/*', (req, res) => {
+controller.webserver.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 });
 
