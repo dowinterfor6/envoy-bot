@@ -7,3 +7,5 @@ TODO
   * Recommended ask/search/whatever
 * Randomized filler words
 * Hints/popdown thingy
+* Mailto
+* Contact form
