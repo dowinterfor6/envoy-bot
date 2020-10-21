@@ -2,14 +2,17 @@
   // border: 1px solid black;
   height: 75px;
   position: relative;
-  background-color: $primaryChatColor;
+  // background-color: $primaryChatColor;
+  background-color: white;
+  border-bottom: 1px solid $borderColor;
   // box-shadow: 0 0px 3px 0px black;
   display: flex;
 
   h1 {
     margin: auto;
-    font-size: 24px;
+    font-size: 32px;
     text-align: center;
+    color: $tertiaryColor;
   }
 
   .envoy-bot-network-status {

@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { postMessage } from '../../utils/bot_utils';
 import HeaderBar from './HeaderBar';
 
-const Chat = () => {
+const Chat = ({ setDetails }) => {
   const currUser = "69420";
   const [textInput, setTextInput] = useState("");
   const [messages, setMessages] = useState([]);
@@ -55,8 +55,16 @@ const Chat = () => {
     // TODO: Handle typing/loading?
     // TODO: Lock further input to prevent spam/data getting lost?
     const { data } = await postMessage(payload);
+    // TODO: There's gotta be a better way but i'm too tired
+    const nonPayloadRes = data.filter((res) => !res.payload);
+    const payloadRes = data.filter((res) => res.payload);
+
+    if (payloadRes) {
+      setDetails(payloadRes);
+    }
+
     // TODO: Probably try to optimize this?
-    setMessages([...messages, payload, ...data]);
+    setMessages([...messages, payload, ...nonPayloadRes]);
     // TODO: Add highlights from work for data
     // TODO: Add project links to languages
   }

@@ -10,9 +10,11 @@
 @import "./components/chat-bot.scss";
 @import "./components/landing.scss";
 @import "./components/header-bar.scss";
+@import "./components/card.scss";
 
 body {
   height: 100vh;
+  line-height: 1.25;
   // TODO: width: 100vh might break on mobile
 }
 

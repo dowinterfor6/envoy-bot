@@ -1,8 +1,15 @@
 .details-display {
-  background-color: $secondaryChatColor;
-
+  // background-color: $secondaryChatColor;
+  background-color: white;
+  border-right: 1px solid $borderColor;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  
   &-header {
-    background-color: $tertiaryChatColor;
+    border-bottom: 1px solid $borderColor;
+    background-color: white;
+    // background-color: $tertiaryChatColor;
     height: 75px;
     position: relative;
     // box-shadow: 0 0px 3px 0px black;
@@ -10,38 +17,47 @@
 
     h1 {
       margin: auto;
-      font-size: 24px;
+      font-size: 26px;
       text-align: center;
       text-transform: capitalize;
+      color: $primaryColor;
     }
   }
 
   &-content {
-    padding: 5px 10px;
+    flex: 1;
+    padding: 5px 0;
+    overflow: auto;
 
     .content-list {
-      .parent-box {
-        border: 1px solid $primaryColor;
-        border-radius: 5px;
-        background-color: $backgroundColor;
-        padding: 15px;
+      // .parent-box {
+      //   border: 1px solid $primaryColor;
+      //   border-radius: 5px;
+      //   background-color: $backgroundColor;
+      //   padding: 15px;
 
-        &:not(:first-of-type) {
-          margin: 20px 0;
-        }
+      //   &:not(:first-of-type) {
+      //     margin: 20px 0;
+      //   }
 
-        h3 {
-          font-size: 18px;
-        }
+      //   h3 {
+      //     font-size: 18px;
+      //   }
 
-        ul {
-          // padding-left: 20px;
-          li {
-            margin: 10px 0;
-            font-size: 14px;
-            // list-style-type: disc;
-          }
-        }
+      //   ul {
+      //     // padding-left: 20px;
+      //     li {
+      //       margin: 10px 0;
+      //       font-size: 14px;
+      //       // list-style-type: disc;
+      //     }
+      //   }
+      // }
+      .no-details {
+        padding: 10px;
+        font-size: 22px;
+        color: #636363;
+        line-height: 1.5;
       }
     }
   }

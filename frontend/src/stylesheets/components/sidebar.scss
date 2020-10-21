@@ -1,5 +1,7 @@
 .side-bar {
-  background-color: $quaternaryChatColor;
+  // background-color: $quaternaryChatColor;
+  background-color: white;
+  border-right: 1px solid $borderColor;
 
   &-icons-list {
     display: flex;

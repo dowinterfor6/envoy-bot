@@ -7,9 +7,16 @@ module.exports = (controller) => {
       // TODO: Handle plural
       const replyIntro = "I have the following projects: ";
       await bot.reply(message, replyIntro);
-      projects.forEach(async ({ title, summary }) => {
+      projects.forEach(async (project) => {
+        const { title, summary } = project;
         const reply = `${title}: ${summary}`;
         await bot.reply(message, reply);
+
+        const payloadRes = {
+          type: "project",
+          payload: project
+        };
+        await bot.reply(message, payloadRes);
       })
       // TODO: Display more detail somewhere/somehow
     } else {

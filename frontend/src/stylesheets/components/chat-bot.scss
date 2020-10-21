@@ -64,6 +64,7 @@
     .input-container {
       height: 50px;
       border-top: 1px solid $primaryColor;
+      border-top: 1px solid $borderColor;
       display: flex;
       justify-content: space-between;
       
