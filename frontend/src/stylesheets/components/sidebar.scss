@@ -19,8 +19,10 @@
       align-items: center;
       margin-bottom: 10px;
       cursor: pointer;
-      color: $primaryColor;
 
+      color: $primaryColor;
+      
+      // TODO: Copy pasted from bottom because first icon is actually a link
       &:hover {
         transition: all 0.5s;
         // background-color: $primaryColor;
@@ -32,10 +34,24 @@
       }
 
       a {
-        &:visited {
-          color: inherit;
+        color: $primaryColor;
+  
+        &:hover {
+          transition: all 0.5s;
+          // background-color: $primaryColor;
+          color: $tertiaryColor;
+        }
+  
+        &.active {
+          color: $tertiaryColor;
         }
       }
+
+      // a {
+      //   &:visited {
+      //     color: inherit;
+      //   }
+      // }
 
     }
   }

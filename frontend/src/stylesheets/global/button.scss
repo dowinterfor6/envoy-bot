@@ -8,6 +8,9 @@ button, .button {
   cursor: pointer;
   padding: 10px 15px;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: $primaryColor;

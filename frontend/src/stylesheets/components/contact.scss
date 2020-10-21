@@ -1,0 +1,102 @@
+.contact-modal {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+
+  &.hide {
+    display: none;
+    opacity: 0;
+    // TODO: this transition aint working
+    transition: all 1s;
+  }
+
+  .contact-container {
+    width: 600px;
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+      h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .subject-container, .message-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .message {
+          flex: 1;
+        }
+      }
+
+      .subject-container {
+        margin-bottom: 5px;
+
+        .subject {
+          margin-top: 5px;
+          padding: 5px;
+        }
+      }
+
+      .message-container {
+        margin-bottom: 10px;
+
+        flex: 1;
+        .message {
+          margin-top: 5px;
+          padding: 5px;
+          max-width: 100%;
+          resize: none;
+        }
+      }
+
+      .button-container {
+        display: flex;
+
+        .send-button {
+          flex: 1;
+        }
+
+        .confirm-container {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          
+          label {
+            font-size: 24px;
+            margin-right: 50px;
+          }
+
+          .confirm-buttons-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+            button, .button {
+              width: 100%;
+            }
+          }
+        }
+
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+}
