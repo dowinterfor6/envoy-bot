@@ -32,6 +32,10 @@ controller.webserver.get('/', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
 });
 
+controller.webserver.post('/contact', (req, res) => {
+  res.send("test");
+});
+
 // TODO: Currently not being used
 // if (process.env.CMS_URI) {
 //   controller.usePlugin(new BotkitCMSHelper({

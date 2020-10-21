@@ -1,9 +1,9 @@
-import { faArrowLeft, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faEnvelopeOpen, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const SideBar = ({ setActiveTab }) => {
+const SideBar = ({ setActiveTab, openModal }) => {
   // TODO: maybe do this in redux/use reducer if i wasn't so lazy
   const [activeState, setActiveState] = useState({
     details: false,
@@ -44,6 +44,12 @@ const SideBar = ({ setActiveTab }) => {
           onClick={handleTabSelection}
         >
           <FontAwesomeIcon icon={faQuestion} size="lg" />
+        </li>
+        <li 
+          id="email"
+          onClick={openModal}
+        >
+          <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
         </li>
       </ul>
     </section>

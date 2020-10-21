@@ -25,7 +25,7 @@ const DetailsDisplay = ({ activeTab, details }) => {
       title: "What can Envoy Bot do?",
       type: "help",
       res: [
-        "Respond to basic questions about Andrew in his place (as if I am Andrew)",
+        "Respond to basic questions about Andrew (as if I am Andrew)",
         "Provide a concise answer in chat, and a detailed answer (if applicable) in the bookmarks tab",
         "Help you get to know me better"
       ]
