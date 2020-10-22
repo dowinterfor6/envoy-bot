@@ -1,9 +1,9 @@
-import { faArrowLeft, faEnvelopeOpen, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faEnvelopeOpen, faExclamationCircle, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const SideBar = ({ setActiveTab, openModal }) => {
+const SideBar = ({ setActiveTab, openModal, detailsNotif }) => {
   // TODO: maybe do this in redux/use reducer if i wasn't so lazy
   const [activeState, setActiveState] = useState({
     details: false,
@@ -23,6 +23,11 @@ const SideBar = ({ setActiveTab, openModal }) => {
     setActiveState(newState);
   }
 
+  let notifDisplay = false;
+  if (!activeState.details && detailsNotif) {
+    notifDisplay = true;
+  }
+
   return (
     <section className="side-bar">
       <ul className="side-bar-icons-list">
@@ -36,6 +41,9 @@ const SideBar = ({ setActiveTab, openModal }) => {
           className={activeState.details ? "active" : ""}
           onClick={handleTabSelection}
         >
+          <div className={`details-notif ${notifDisplay ? "" : "hide"}`}>
+            <FontAwesomeIcon icon={faExclamationCircle} />
+          </div>
           <FontAwesomeIcon icon={faInfo} size="lg"/>
         </li>
         <li 

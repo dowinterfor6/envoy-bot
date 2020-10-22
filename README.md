@@ -9,3 +9,6 @@ TODO
 * Hints/popdown thingy
 * Mailto
 * Contact form
+* Readme
+* screenshots?
+* mobile responsive

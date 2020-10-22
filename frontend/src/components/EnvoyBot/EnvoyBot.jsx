@@ -21,7 +21,11 @@ const EnvoyBot = () => {
 
   return (
     <section className="envoy-bot-container">
-      <SideBar setActiveTab={setActiveTab} openModal={openModal}/>
+      <SideBar
+        setActiveTab={setActiveTab}
+        openModal={openModal}
+        detailsNotif={details.length > 0}
+      />
       <DetailsDisplay activeTab={activeTab} details={details}/>
       <Chat setDetails={setDetails}/>
       <Contact modal={modal} closeModal={closeModal}/>

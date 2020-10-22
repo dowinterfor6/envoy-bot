@@ -52,7 +52,17 @@
       //     color: inherit;
       //   }
       // }
+      .details-notif {
+        position: absolute;
+        transform: translate(15px, -10px);
+        color: $quinternaryChatColor;
+        opacity: 1;
+        transition: all 1s;
 
+        &.hide {
+          opacity: 0;
+        }
+      }
     }
   }
 }
