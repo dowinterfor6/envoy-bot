@@ -24,6 +24,7 @@ const DetailsDisplay = ({ activeTab, details }) => {
       type: "help",
       res: [
         "I listen to specific key words and try my best to provide an appropriate response",
+        "Type 'help' for some of the keywords I'm listening to!"
       ]
     }
   ]
