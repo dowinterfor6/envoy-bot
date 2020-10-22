@@ -98,5 +98,31 @@
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+      height: 80%;
+
+      form {     
+        h2 {
+          font-size: 28px;
+        }
+
+        .button-container {
+          .confirm-container {
+            label {
+              font-size: 16px;
+              margin-right: 0px;
+            }
+            .confirm-buttons-container {   
+              margin-left: 5px;          
+              button, .button {
+                width: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

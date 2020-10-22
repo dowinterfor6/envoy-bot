@@ -3,18 +3,7 @@ import Card from './Card';
 
 const DetailsDisplay = ({ activeTab, details }) => {
   const detailsContentRef = useRef();
-  /* 
-    Summary Format:
-    Cat title
-    Start date - end date
-    Bullet pointed summary
-  */
 
-  /*
-    Help format:
-    Tip title
-    Tips
-  */
   useEffect(() => {
     // TODO: this is hardcoded refactor pls
     detailsContentRef.current.style.maxHeight = `${document.body.clientHeight - 75}px`;

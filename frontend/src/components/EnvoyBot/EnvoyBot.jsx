@@ -10,6 +10,7 @@ const EnvoyBot = () => {
   const [details, setDetails] = useState([]);
   // TODO: use reducer/redux/context
   const [modal, setModal] = useState(false);
+  const [mobileDetails, setMobileDetails] = useState(false);
 
   const openModal = () => {
     setModal(true);
@@ -17,14 +18,25 @@ const EnvoyBot = () => {
 
   const closeModal = () => {
     setModal(false);
+  };
+
+  const closeMobileDetails = () => {
+    setMobileDetails(false);
+  }
+
+  const openMobileDetails = () => {
+    setMobileDetails(true);
   }
 
   return (
-    <section className="envoy-bot-container">
+    <section className={`envoy-bot-container ${mobileDetails ? "show-details" : ""}`}>
       <SideBar
         setActiveTab={setActiveTab}
         openModal={openModal}
         detailsNotif={details.length > 0}
+        mobileDetails={mobileDetails}
+        openMobileDetails={openMobileDetails}
+        closeMobileDetails={closeMobileDetails}
       />
       <DetailsDisplay activeTab={activeTab} details={details}/>
       <Chat setDetails={setDetails}/>

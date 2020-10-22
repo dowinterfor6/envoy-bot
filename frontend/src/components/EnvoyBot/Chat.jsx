@@ -17,22 +17,21 @@ const Chat = ({ setDetails }) => {
   }, [messages]);
 
   useEffect(() => {
-    // TODO: Maybe remove this idk
-    envoyBotWrapper.current.classList.toggle("show");
-    envoyBotWrapper.current.addEventListener("transitionend", async () => {
-      const payload = {
-        type: "greeting",
-        text: "greeting",
-        channel: "websocket",
-        user: currUser
-      }
-      const { data } = await postMessage(payload);
-      setMessages([...data]);
-    });
-
+    getWelcomeMessage();
     // TODO: this is hardcoded refactor pls
     messageListRef.current.style.maxHeight = `${document.body.clientHeight - 70 - 50}px`;
   }, []);
+
+  const getWelcomeMessage = async () => {
+    const payload = {
+      type: "greeting",
+      text: "greeting",
+      channel: "websocket",
+      user: currUser
+    }
+    const { data } = await postMessage(payload);
+    setMessages([...data]);
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

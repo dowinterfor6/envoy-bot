@@ -2,4 +2,13 @@
   display: grid;
   grid-template-columns: 75px 300px 1fr;
   height: 100%;
+
+  @media screen and (max-width: 768px) {
+    // TODO: Transition doesn't work?
+    grid-template-columns: 60px 0 1fr;
+
+    &.show-details {
+      grid-template-columns: 60px 1fr 0;
+    }
+  }
 }
